@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: production_card_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: production_card_db
+      MYSQL_USER: prodcard
+      MYSQL_PASSWORD: prodcard123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/app/db/migrations/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # FastAPI Backend
+  backend:
+    build: ./backend
+    container_name: production_card_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: mysql+pymysql://prodcard:prodcard123@db:3306/production_card_db
+      SECRET_KEY: 09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+    depends_on:
+      - db
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+volumes:
+  mysql_data:
+
